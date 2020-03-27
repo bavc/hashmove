@@ -5,10 +5,10 @@ or: tools for using checksums in preservation workflows
 
 Here's a list of tools available in this repo
 
-* hashcopy
+* hashsync
 * hashchecker
 
-## hashcopy
+## hashsync
 
 **What Is It?**
 
@@ -49,7 +49,7 @@ It's very important for us to know if something failed. However, in some cases h
 
 **General Usage**
 
-python hashmove.py [flags] [any number of source directories or source file full paths] [destination parent directory full path]
+python hashsync.py [flags] [any number of source directories or source file full paths] [destination parent directory full path]
 
 **to copy a file (windows filepath)**
 
@@ -63,6 +63,21 @@ python hashmove.py /home/path/to/sourceDir/ /home/path/to/destDir/
 
 python hashmove.py /home/path/to/sourceDir1/file1 /home/path/to/sourceDir2/ /home/path/to/sourceDir3/file3 /home/path/to/destDir/
 
-### pro-tip
 
-## hashcopy
+## hashchecker
+
+Hashchecker will validate sidecar checksum files against checksums stored in Salesforce. This script is built to work with BAVC's Salesforce implementation, so it's not very extensible. However, it may be helpful for people trying to work with the Salesforce API.
+
+**Credentials Setup**
+
+In order to use this you'll need to create a `config.py` file with the following format:
+
+```
+username = "your.email@bavc.org"
+password = "yourpassword"
+security_token = "yourAPIkey"
+```
+
+**General Usage**
+
+python hashchecker.py [any number of source directories or source file full paths]
