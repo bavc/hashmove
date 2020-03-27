@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-#hashcopy.py
+#hashsync.py
 #better file movement
 #takes arguments for source or dest, source can be file or dir, dest must be dir
 #copies files, hashes pre and post copy, deletes if hashes match, deletes dir if empty
@@ -29,7 +29,7 @@ import subprocess
 #generate list of destination files of pairs of start and end files
 def makeFileList(sourceList,dest,hashalg,hashlengths,excludeRoot):
     '''
-returns a list of file(s) to hashcopy
+returns a list of file(s) to hashsync
     '''
     flist = []
     for s in sourceList:
