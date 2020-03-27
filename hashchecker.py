@@ -1,10 +1,10 @@
 #!/usr/bin/env python
-#hashmove.py
+#hashchecker.py
 
 
 #######################################################################################################################
 ###REQUIRED LIBRARIES####
-###simply_salesforce
+###simple_salesforce
 #######################################################################################################################
 
 import hashlib
@@ -17,7 +17,7 @@ from simple_salesforce import Salesforce
 
 def makeFileList(sourceList,hashalg):
     '''
-returns a list of file(s) to hashmove. list is a set of tuples with (filepath,hash). for now the hash is empty
+returns a list of file(s) to hashchecker. list is a set of dictionaries
     '''
     flist = []
     for s in sourceList:

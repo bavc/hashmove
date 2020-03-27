@@ -78,6 +78,14 @@ password = "yourpassword"
 security_token = "yourAPIkey"
 ```
 
+**Required Libraries**
+
+You'll need to install `simple_salesforce`. You can do so with the following command
+
+```
+pip3 install simple_salesforce
+```
+
 **General Usage**
 
 python hashchecker.py [any number of source directories or source file full paths]
