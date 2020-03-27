@@ -1,5 +1,9 @@
-# hashmove
-file movement for people without rsync
+# preshus
+PREServation Hash UtilitieS
+
+## hashcopy
+
+or: tools for using checksums in preservation workflows
 
 **General Usage**
 
