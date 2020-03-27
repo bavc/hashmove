@@ -6,6 +6,7 @@ or: tools for using checksums in preservation workflows
 Here's a list of tools available in this repo
 
 * hashsync
+* hashmaker
 * hashchecker
 
 ## hashsync
@@ -53,20 +54,40 @@ python hashsync.py [flags] [any number of source directories or source file full
 
 **to copy a file (windows filepath)**
 
+```
 python hashmove.py C:/path/to/file.ext C:/path/to/parent/dir
+```
 
 **to copy a directory (unix filepath)**
 
+```
 python hashmove.py /home/path/to/sourceDir/ /home/path/to/destDir/
+```
 
 **to copy two files and a directory (unix filepath)**
 
+```
 python hashmove.py /home/path/to/sourceDir1/file1 /home/path/to/sourceDir2/ /home/path/to/sourceDir3/file3 /home/path/to/destDir/
+```
 
+## hashmaker
+
+hashmaker creates and validates sidecar checksum files
+
+**General Usage**
+
+```
+python hashchecker.py [flags] [any number of source directories or source file full paths]
+```
+
+**Important Details**
+
+* In order to use hashmaker you'll need to give it either the -m flag (make mode) or -v flag (verify mode). You cannot run the script without one of these flags, and you cannot run it with both of them at the same time.
+* In make mode hashmaker will recreate a sidecar file if it's out of date. It will report this as a WARNING.
 
 ## hashchecker
 
-Hashchecker will validate sidecar checksum files against checksums stored in Salesforce. This script is built to work with BAVC's Salesforce implementation, so it's not very extensible. However, it may be helpful for people trying to work with the Salesforce API.
+hashchecker will validate sidecar checksum files against checksums stored in Salesforce. This script is built to work with BAVC's Salesforce implementation, so it's not very extensible. However, it may be helpful for people trying to work with the Salesforce API.
 
 **Credentials Setup**
 
@@ -88,4 +109,6 @@ pip3 install simple_salesforce
 
 **General Usage**
 
+```
 python hashchecker.py [any number of source directories or source file full paths]
+```
