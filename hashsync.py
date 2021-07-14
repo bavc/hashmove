@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/local/bin/python3
 #hashsync.py
 #better file movement
 #takes arguments for source or dest, source can be file or dir, dest must be dir
